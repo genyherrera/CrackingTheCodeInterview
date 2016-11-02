@@ -26,11 +26,6 @@ public class Exercise6 {
 				count = 0;
 			}
 		}
-		if (result.length() < value.length()) {
-			System.out.println(result.toString());
-		} else {
-			System.out.println(value);
-		}
 		return result.length() < value.length() ? result.toString() : value;
 	}
 }
