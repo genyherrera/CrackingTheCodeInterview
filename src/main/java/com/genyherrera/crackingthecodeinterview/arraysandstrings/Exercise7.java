@@ -12,7 +12,7 @@ public class Exercise7 {
 	 * @param matrix
 	 * @return return the rotated matrix
 	 */
-	public static void rotate(char[][] matrix) {
+	public char[][] rotate(char[][] matrix) {
 		int n = matrix.length;
 		for (int layer = 0; layer < n / 2; layer++) {
 			int first = layer;
@@ -33,30 +33,8 @@ public class Exercise7 {
 
 				// top -> right
 				matrix[i][last] = top; // right <- saved top
-				
-				printMatrix(matrix);
 			}
 		}
-	}
-	
-	public static void main(String[] args) {
-		char[][] matrix = initializeMatrix();
-		printMatrix(matrix);
-		rotate(matrix);
-	}
-	
-	public static void printMatrix(char[][] matrix){
-        System.out.print("\n");
-        for(int i=0;i<matrix.length;i++){
-            for(int j=0;j<matrix.length;j++){
-                System.out.print(" "+matrix[i][j]);
-            }
-            System.out.print("\n");
-        }
-    }
-	
-	public static char[][] initializeMatrix(){
-		char[][] matrix = {{'A','B','C','D','E','F'}, {'G','H','I','J','K','L'}, {'M','N','O','P','Q','R'}, {'S','T','U','V','W','X'}, {'Y','Z','1','2','3','4'}, {'5','6','7','8','9','0'}};
 		return matrix;
-    }
+	}
 }

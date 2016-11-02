@@ -14,7 +14,7 @@ public class Exercise8 {
 	 * setZerosMine - Method to set row and column to zero each time that found a 0 on matrix 
 	 * @param matrix
 	 */
-	public void setZerosMine(int[][] matrix) {
+	public int[][] setZerosMine(int[][] matrix) {
 		List<Integer> rows = new ArrayList<Integer>();
 		List<Integer> columns = new ArrayList<Integer>();
 
@@ -28,6 +28,7 @@ public class Exercise8 {
 				}
 			}
 		}
+		return matrix;
 	}
 
 	/**
@@ -48,8 +49,9 @@ public class Exercise8 {
 		}
 	}
 
-	// BOOK SOLUTION
-	public void setzeros(int[][] matrix) {
+	// ------------------ BOOK SOLUTION --------------------------- //
+	
+	public int[][] setZeros(int[][] matrix) {
 		boolean rowHasZero = false;
 		boolean colHasZero = false;
 
@@ -101,6 +103,8 @@ public class Exercise8 {
 		if (colHasZero) {
 			nullifyColumn(matrix, 0);
 		}
+		
+		return matrix;
 	}
 
 	private void nullifyRow(int[][] matrix, int row) {
