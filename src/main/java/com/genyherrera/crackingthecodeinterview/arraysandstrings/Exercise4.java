@@ -46,7 +46,7 @@ public class Exercise4 {
 	 * @param c
 	 * @return integer value for all letter characters. All non-letter characters return -1.
 	 */
-	int getCharNumber(Character letter) {
+	private int getCharNumber(Character letter) {
 		int integerA = Character.getNumericValue('a');
 		int integerZ = Character.getNumericValue('z');
 		int integerLetter = Character.getNumericValue(letter);
