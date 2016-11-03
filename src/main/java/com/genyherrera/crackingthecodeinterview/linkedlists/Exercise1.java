@@ -20,17 +20,17 @@ public class Exercise1 {
 	 * @return new HashSet without duplicate elements
 	 */
 	@SuppressWarnings("rawtypes")
-	public HashSet removeDuplicatesWithBuffer(LinkedListNode header) {
+	public HashSet removeDuplicatesWithBuffer(LinkedListNode head) {
 		HashSet<Integer> set = new HashSet<Integer>();
 		LinkedListNode previous = null;
-		while (header != null) {
-			if (set.contains(header.data)) {
-				previous.next = header.next;
+		while (head != null) {
+			if (set.contains(head.data)) {
+				previous.next = head.next;
 			} else {
-				set.add(header.data);
-				previous = header;
+				set.add(head.data);
+				previous = head;
 			}
-			header = header.next;
+			head = head.next;
 		}
 		
 		return set;
@@ -41,8 +41,8 @@ public class Exercise1 {
 	 * @param header
 	 * @return the LinkedList without the duplicated elements 
 	 */
-	public LinkedListNode removeDuplicatesWithoutBuffer(LinkedListNode header) {
-		LinkedListNode current = header;
+	public LinkedListNode removeDuplicatesWithoutBuffer(LinkedListNode head) {
+		LinkedListNode current = head;
 
 		while (current != null) {
 			/* Remove all future nodes that have the same value */
@@ -57,6 +57,6 @@ public class Exercise1 {
 			current = current.next;
 		}
 
-		return header;
+		return head;
 	}
 }

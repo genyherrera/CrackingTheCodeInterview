@@ -11,18 +11,20 @@ import com.genyherrera.crackingthecodeinterview.auxiliar.LinkedListNode;
  * 			 How would you solve this problem if a temporary buffer is not allowed?
  * @author geny.herrera
  */
-public class Exercise1Test {
+public class Exercise2Test {
 
 	@Test
-	public void testRemoveDuplicatesEquals() {
-		Assert.assertEquals("[1, 2, 3, 4, 5]", new Exercise1().removeDuplicatesWithBuffer(createLinkedList()).toString());
-		Assert.assertEquals("->1->2->3->4->5", new Exercise1().removeDuplicatesWithoutBuffer(createLinkedList()).toString());
+	public void testKthToLastWithBuffer() {
+		Assert.assertSame(5, new Exercise2().kthToLastWithBuffer(createLinkedList(), 3).data);
+		Assert.assertSame(5, new Exercise2().kthTolast(createLinkedList(), 3).data);
+		Assert.assertSame(5, new Exercise2().nthTolast(createLinkedList(), 3).data);
 	}
 
 	@Test
 	public void testRemoveDuplicatesNotEquals() {
-		Assert.assertNotEquals("[1, 2, 3, 4, 5, 2, 3]", new Exercise1().removeDuplicatesWithBuffer(createLinkedList()).toString());
-		Assert.assertNotEquals("->1->2->3->4->5-2>->3", new Exercise1().removeDuplicatesWithoutBuffer(createLinkedList()).toString());
+		Assert.assertNotSame(1, new Exercise2().kthToLastWithBuffer(createLinkedList(), 3).data);
+		Assert.assertNotSame(3, new Exercise2().kthTolast(createLinkedList(), 3).data);
+		Assert.assertNotSame(4, new Exercise2().nthTolast(createLinkedList(), 3).data);
 	}
 
 	private LinkedListNode createLinkedList() {
@@ -31,8 +33,8 @@ public class Exercise1Test {
 		head.next.next = new LinkedListNode(3);
 		head.next.next.next = new LinkedListNode(4);
 		head.next.next.next.next = new LinkedListNode(5);
-		head.next.next.next.next.next = new LinkedListNode(2);
-		head.next.next.next.next.next.next = new LinkedListNode(3);
+		head.next.next.next.next.next = new LinkedListNode(6);
+		head.next.next.next.next.next.next = new LinkedListNode(7);
 		return head;
 	}
 }
