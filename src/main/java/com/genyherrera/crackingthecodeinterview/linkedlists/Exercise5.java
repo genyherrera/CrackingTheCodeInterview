@@ -91,11 +91,9 @@ public class Exercise5 {
 	private LinkedListNode createLinkedListNodeFromIntegerFollowUp(Integer result) {
 		String integerStringValue = result.toString();
 
-		new String();
 		LinkedListNode root = new LinkedListNode(Integer.parseInt(String.valueOf(integerStringValue.charAt(0))));
 		
 		for (int i = 1; i < integerStringValue.length() ; i++) {
-			new String();
 			root = addLast(root, new LinkedListNode(Integer.parseInt(String.valueOf(integerStringValue.charAt(i)))));
 		}
 		
