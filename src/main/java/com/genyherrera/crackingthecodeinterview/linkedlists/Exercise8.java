@@ -21,6 +21,11 @@ import com.genyherrera.crackingthecodeinterview.auxiliar.LinkedListNode;
 public class Exercise8 {
 
 	// --------------------------------- BOOK SOLUTION --------------------------------- //
+	/**
+	 * findLoopPoint - Method to find the loop point on a singly linkedlist
+	 * @param head
+	 * @return the loop node
+	 */
 	public LinkedListNode findLoopPoint(LinkedListNode head) {
 		LinkedListNode slow = head;
 		LinkedListNode fast = head;
@@ -51,10 +56,16 @@ public class Exercise8 {
 		return fast;
 	}
 
-	// --------------------------------- MINE SOLUTION --------------------------------- //
+	// --------------------------------- MY SOLUTION --------------------------------- //
+	/**
+	 * findLoopPointMine - Method to find the loop point on a singly linkedlist
+	 * @param head
+	 * @return the loop node
+	 */
 	public LinkedListNode findLoopPointMine(LinkedListNode head) {
 		List<LinkedListNode> list = new ArrayList<LinkedListNode>();
 
+		// Add all elements to a list, if some element is referenced twice that element is the loop point
 		while (head != null && head.next != null) {
 			if (list.contains(head) == false) {
 				list.add(head);
