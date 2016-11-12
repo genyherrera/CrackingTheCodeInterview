@@ -3,8 +3,6 @@ package com.genyherrera.crackingthecodeinterview.linkedlists;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.genyherrera.crackingthecodeinterview.auxiliar.LinkedListNode;
-
 /**
  * @problem: Remove Dups: Write code to remove duplicates from an unsorted linked list.
  * 			 FOLLOW UP

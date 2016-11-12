@@ -3,8 +3,6 @@ package com.genyherrera.crackingthecodeinterview.linkedlists;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.genyherrera.crackingthecodeinterview.auxiliar.LinkedListNode;
-
 /**
  * @problem: Palindrome: Implement a function to check if a linked list is a palindrome.
  * @author geny.herrera

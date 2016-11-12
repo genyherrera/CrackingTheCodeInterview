@@ -3,8 +3,6 @@ package com.genyherrera.crackingthecodeinterview.linkedlists;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.genyherrera.crackingthecodeinterview.auxiliar.LinkedListNode;
-
 /**
  * @problem: Loop Detection: Given a circular linked list, implement an algorithm that returns the node at the
  * 			 beginning of the loop.

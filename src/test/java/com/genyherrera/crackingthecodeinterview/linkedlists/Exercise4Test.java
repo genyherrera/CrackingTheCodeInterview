@@ -3,8 +3,6 @@ package com.genyherrera.crackingthecodeinterview.linkedlists;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.genyherrera.crackingthecodeinterview.auxiliar.LinkedListNode;
-
 /**
  * @problem: Partition: Write code to partition a linked list around a value x, such that all nodes less than x come
  * 			 before all nodes greater than or equal to x. If x is contained within the list the values of x only need

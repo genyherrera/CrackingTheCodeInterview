@@ -1,7 +1,5 @@
 package com.genyherrera.crackingthecodeinterview.linkedlists;
 
-import com.genyherrera.crackingthecodeinterview.auxiliar.LinkedListNode;
-
 /**
  * @problem: Sum Lists: You have two numbers represented by a linked list, where each node contains a single
  * 			 digit. The digits are stored in reverse order, such that the 1 's digit is at the head of the list. Write a

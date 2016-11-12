@@ -1,4 +1,4 @@
-package com.genyherrera.crackingthecodeinterview.auxiliar;
+package com.genyherrera.crackingthecodeinterview.linkedlists;
 
 public class LinkedListNode extends Object {
 	

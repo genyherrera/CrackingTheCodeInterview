@@ -2,8 +2,6 @@ package com.genyherrera.crackingthecodeinterview.linkedlists;
 
 import java.util.HashSet;
 
-import com.genyherrera.crackingthecodeinterview.auxiliar.LinkedListNode;
-
 /**
  * @problem: Remove Dups: Write code to remove duplicates from an unsorted linked list.
  * 			 FOLLOW UP

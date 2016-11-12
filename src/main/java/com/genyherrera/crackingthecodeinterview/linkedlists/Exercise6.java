@@ -1,7 +1,5 @@
 package com.genyherrera.crackingthecodeinterview.linkedlists;
 
-import com.genyherrera.crackingthecodeinterview.auxiliar.LinkedListNode;
-
 /**
  * @problem: Palindrome: Implement a function to check if a linked list is a palindrome.
  * @author geny.herrera
