@@ -40,7 +40,7 @@ public class Exercise5 {
 			while(!stack.isEmpty()) {
 				/* Insert each element in s in sorted order into r. */
 				Integer tmp = (Integer) stack.pop();
-				while(!aux.isEmpty() && aux.peek() > tmp) {
+				while(!aux.isEmpty() && (int) peek() > (int) tmp) {
 					stack.push(aux.pop());
 				}
 				aux.push(tmp);

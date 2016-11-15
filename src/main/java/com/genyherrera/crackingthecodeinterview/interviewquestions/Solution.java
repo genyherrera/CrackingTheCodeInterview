@@ -1,63 +1,64 @@
 package com.genyherrera.crackingthecodeinterview.interviewquestions;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.TreeMap;
 
 public class Solution {
-	/* public static boolean[][] visited;
-
-    public static int getBiggestRegion(int[][] matrix) {
-        int count = 0;
-        for (int i = 0; i <= matrix.length; i++) {
-            for (int j = 0; j <= matrix[0].length; j++) {
-                if(!visited[i][j]) max = Math.max(max, findZoneHelper(grid, i, j, 0, matrix.length, matrix[0].length));
-            }
-        }
-    }
-
-    public static int findZoneHelper(int[][] grid, int i, int j, int count, int M, int N) {
-        if(i < 0 || j < 0 || i >= M || j >= N) return 0;
-        if(visited[i][j]) return 0;
-        visited[i][j] = true;
-        if(grid[i][j] == 0) return 0;
-        else return 1 +
-            findZoneHelper(grid, i-1, j-1, count, M, N) +
-            findZoneHelper(grid, i-1, j, count, M, N) + 
-            findZoneHelper(grid, i-1, j+1, count, M, N) + 
-            findZoneHelper(grid, i, j-1, count, M, N) + 
-            findZoneHelper(grid, i, j, count, M, N) + 
-            findZoneHelper(grid, i, j+1, count, M, N) + 
-            findZoneHelper(grid, i+1, j-1, count, M, N) + 
-            findZoneHelper(grid, i+1, j, count, M, N) + 
-            findZoneHelper(grid, i+1, j+1, count, M, N);
-    }
-
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int n = in.nextInt();
-        int m = in.nextInt();
-        int grid[][] = new int[n][m];
-        for(int grid_i=0; grid_i < n; grid_i++){
-            for(int grid_j=0; grid_j < m; grid_j++){
-                grid[grid_i][grid_j] = in.nextInt();
-            }
-        }
-        System.out.println(getBiggestRegion(grid));
-    }*/
 
 	public static void main(String[] args) {
-		System.out.println(isPrime(33));
+		//printStairs(6);
+		
+		/** JAVASCRIPT */
+		//printRestOfDivision();
+		
+		/** JAVA CODE**/
+		//printOrderedCount("fish red blue fish");
+		//countRemoveLetter("aBCDefGHabcAop");
 	}
-	static boolean isPrime(int n) {
-		for (int x = 2; x <= Math.sqrt(n); x++) {
-			if (n % x == 0) {
-				return false;
+
+	private static void printRestOfDivision() {
+		for (int i = 0; i < 11; i++) {
+			System.out.println(i+": " + i%2);
+		}
+		
+	}
+
+	private static void printStairs(int num) {
+		for (int i = 0; i < num; i++) {  // Do it 6 times (rows)
+			for (int j = 1; j <= num; j++) { // Column
+				System.out.print(i < num-j ?" ":"#");
+			}
+			System.out.println();
+		}
+	}
+
+	/**
+	 * Given the following String (fish red blue fish)
+	 * print in order format with count
+	 * Eg: blue - 1; fish - 2; red - 1;  
+	 * @param value
+	 */
+	private static void printOrderedCount(String value) {
+		Map<String, Integer> myMap = new TreeMap<String, Integer>();
+		for(String word : value.split(" ")) {
+			if (myMap.containsKey(word)) {
+				myMap.put(word, myMap.get(word)+1);
+			} else {
+				myMap.put(word, 1); 
 			}
 		}
-		return true;
+		for (Entry<String,Integer> mapValue : myMap.entrySet()) {
+			System.out.print(mapValue.getKey() + " - " + mapValue.getValue() + "; ");
+		}
+	}
+	
+	/**
+	 * Given a String remove all the a's and return the difference of length 
+	 * @param value
+	 */
+	private static void countRemoveLetter(String value) {
+		 System.out.println(value.length() - value.replaceAll("(?i)a", "").length());
 	}
 
 }
