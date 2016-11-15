@@ -2,8 +2,6 @@ package com.genyherrera.crackingthecodeinterview.stacksandqueues;
 
 import java.util.Stack;
 
-import com.genyherrera.crackingthecodeinterview.stacksandqueues.Exercise5.OrderedStack;
-
 /**
  * @problem: Sort Stack: Write a program to sort a stack such that the smallest items are on the top. You can use
  * 			 an additional temporary stack, but you may not copy the elements into any other data structure
@@ -12,7 +10,7 @@ import com.genyherrera.crackingthecodeinterview.stacksandqueues.Exercise5.Ordere
  */
 public class Exercise5 {
 
-	@SuppressWarnings({"rawtypes", "unchecked"})
+	@SuppressWarnings({"rawtypes", "unchecked", "hiding", "serial"})
 	class OrderedStack<Integer> extends Stack<Integer> {
 
 		public Integer push(Integer value) {

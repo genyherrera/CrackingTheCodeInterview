@@ -24,7 +24,7 @@ class IceCream implements Comparable<IceCream> {
         
 }
 
-public class Solution2 {
+public class IceCreamParlor {
    
     public static int binarySearch(int first, int last, IceCream[] arr, int search) {
         return binarySearchRecursive(arr, search, first, last);

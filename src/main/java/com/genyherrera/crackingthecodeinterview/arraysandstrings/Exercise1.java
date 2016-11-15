@@ -1,5 +1,9 @@
 package com.genyherrera.crackingthecodeinterview.arraysandstrings;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * @problem: Is Unique: Implement an algorithm to determine if a string has all unique characters. 
  * 			  What if you cannot use additional data structures?
@@ -33,5 +37,18 @@ public class Exercise1 {
 			asciiCharList[(int) letter] = true;
 		}
 		return true;
+	}
+	
+	/**
+	 * isUniqueUsingAPI - Method to find if a string has only unique characters
+	 * @param value
+	 * @return if the string has only unique characters
+	 */
+	public Boolean isUniqueUsingAPI(String value) {
+		// We put each character of our value in a Set that don't allows duplicated values
+		Set<String> items = new HashSet<String>(Arrays.asList(value.toUpperCase().replaceAll("\\s","").split("")));
+		
+		// If the size of our set is different that the length of our string that means that on the string are duplicated values.
+		return value.length() == items.size();
 	}
 }
