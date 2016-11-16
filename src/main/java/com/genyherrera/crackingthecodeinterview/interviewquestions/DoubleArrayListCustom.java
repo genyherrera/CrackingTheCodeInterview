@@ -15,59 +15,36 @@ import java.util.NoSuchElementException;
  * @param <T>
  */
 //TODO: NOT Complete
-public class DoubleArrayListCustom implements Iterator<Integer> {
-
-    private Collection<Collection<Integer>> myList;
-    private final Iterator<Collection<Integer>> myIterator;
-    private Iterator<Integer> currentIterator;
-
-    public DoubleArrayListCustom(Collection<Collection<Integer>> myList) {
-        this.myList = myList;
-        this.myIterator = myList.iterator();
-        if (myIterator.hasNext()) {
-        	currentIterator = myIterator.next().iterator();
-        }
-    }
-
-    public boolean hasNext() {
-        if (currentIterator == null) {
-            return false;
-        }
-        if (!currentIterator.hasNext()) {
-            while (myIterator.hasNext()) {
-            	currentIterator = myIterator.next().iterator();
-                if (currentIterator.hasNext()) {
-                    return true;
-                }
-            }
-            return false;
-        } else {
-            return true;
-        }
-    }
-
-    public Integer next() {
-        if (hasNext()) {
-            return currentIterator.next();
-        }
-        throw new NoSuchElementException();
-    }
+public class DoubleArrayListCustom {
 
 
-    public void remove() {
-        throw new UnsupportedOperationException();
-    }
-
-	@SuppressWarnings("unchecked")
 	public static void main(String[] args) {
-		List<Integer> inner1 = Arrays.asList(0,1,2,3);
-		List<Integer> inner2 = Arrays.asList(4,5,6);
-		List<Integer> inner3 = Arrays.asList(7,8,9,10);
-		DoubleArrayListCustom doubleCollection = new DoubleArrayListCustom(Arrays.asList(inner1, inner2, inner3));
+		ArrayList<Integer> inner1 = new ArrayList<Integer>(Arrays.asList(0,1,2));
+		ArrayList<Integer> inner2 =  new ArrayList<Integer>(Arrays.asList(3,4,5));
+		ArrayList<Integer> inner3 =  new ArrayList<Integer>(Arrays.asList(6,7,8));
+		ArrayList<Integer> inner4 =  new ArrayList<Integer>(Arrays.asList(9,10,11));
+		ArrayList<Integer> inner5 =  new ArrayList<Integer>(Arrays.asList(12,13,14));
+		ArrayList<Integer> inner6 =  new ArrayList<Integer>(Arrays.asList(15,16,17));
 
-		while (doubleCollection.hasNext()) {
-            Integer value = doubleCollection.next();
-            System.out.println(value);
-        }
+		ArrayList<ArrayList<Integer>> doubleList = new ArrayList<ArrayList<Integer>>(); 
+		doubleList.add(inner1);
+		doubleList.add(inner2);
+		doubleList.add(inner3);
+		doubleList.add(inner4);
+		doubleList.add(inner5);
+		doubleList.add(inner6);
+
+		Iterator<ArrayList<Integer>> outterIterator = doubleList.iterator();
+
+		while(outterIterator.hasNext()) {
+			Iterator<Integer> innerIterator = outterIterator.next().iterator();
+
+			while (innerIterator.hasNext()) {
+				System.out.println(innerIterator.next());
+			}
+		}
+
 	}
+
+
 }

@@ -37,13 +37,13 @@ public class Exercise6 {
 	 * @return the linkedlist reversed
 	 */
 	private LinkedListNode reverse(LinkedListNode node) {
-		LinkedListNode head = null;
+		LinkedListNode newHead = null;
 		while(node != null) {
 			LinkedListNode n = new LinkedListNode(node.data); // Copy node data
-			n.next = head;
-			head = n;
+			n.next = newHead;
+			newHead = n;
 			node = node.next;
 		}
-		return head;
+		return newHead;
 	}
 }

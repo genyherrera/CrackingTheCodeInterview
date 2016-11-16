@@ -4,7 +4,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.TreeMap;
 
-public class Solution {
+public class UtlimateSoftwareSolution {
 
 	public static void main(String[] args) {
 		//printStairs(6);
