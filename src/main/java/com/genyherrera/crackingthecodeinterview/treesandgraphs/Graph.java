@@ -2,14 +2,14 @@ package com.genyherrera.crackingthecodeinterview.treesandgraphs;
 
 import java.util.List;
 
-public class Graph {
+public class Graph implements Cloneable { 
 
 	private List<Node> nodes;
 	
 	public Graph(List<Node> nodes) {
 		this.nodes = nodes;
 	}
-
+	
 	public List<Node> getNodes() {
 		return nodes;
 	}
@@ -17,4 +17,6 @@ public class Graph {
 	public void setNodes(List<Node> nodes) {
 		this.nodes = nodes;
 	}
+	
+	
 }
